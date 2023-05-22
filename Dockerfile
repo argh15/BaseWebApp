@@ -2,7 +2,7 @@
 FROM node:18
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /Users/arghadeep/Projects/Personal/Web/BaseWebApp 
 
 # Copy the application files into the working directory
 COPY package*.json ./
