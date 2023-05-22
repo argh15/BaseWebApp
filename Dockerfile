@@ -9,6 +9,7 @@ COPY package*.json ./
 
 # Install the application dependencies
 RUN npm install
+RUN npm start
 
 # Bundle app source
 COPY . .
