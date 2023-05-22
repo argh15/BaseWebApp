@@ -2,15 +2,17 @@
 FROM node:18
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy the application files into the working directory
-COPY . /app
-
-EXPOSE 8088
+COPY package*.json ./
 
 # Install the application dependencies
 RUN npm install
 
+# Bundle app source
+COPY . .
+
+EXPOSE 8088
 # Define the entry point for the container
-CMD ["npm", "start"]
+CMD [ "node", "server.js" ]
