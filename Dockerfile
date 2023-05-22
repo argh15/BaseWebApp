@@ -2,7 +2,7 @@
 FROM node:18
 
 # Set the working directory in the container
-WORKDIR /Users/arghadeep/Projects/Personal/Web/BaseWebApp 
+WORKDIR /usr/src/app
 
 # Copy the application files into the working directory
 COPY package*.json ./
@@ -16,4 +16,4 @@ COPY . .
 
 EXPOSE 8088
 # Define the entry point for the container
-CMD [ "node", "start.js" ]
+CMD [ "project", "start.js" ]
