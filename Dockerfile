@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 8088
 # Define the entry point for the container
-CMD [ "node", "server.js" ]
+CMD [ "node", "start.js" ]
